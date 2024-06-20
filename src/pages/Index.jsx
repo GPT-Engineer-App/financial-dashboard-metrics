@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Progress } from "@/components/ui/progress";
+import { Progress } from "@/components/ui/progress-bar";
 
 const financialMetrics = [
   { name: "Revenue", value: "$120,000", progress: 75 },
