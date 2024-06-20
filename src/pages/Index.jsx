@@ -1,7 +1,6 @@
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Progress } from "@/components/ui/progress-bar";
 
 const financialMetrics = [
   { name: "Revenue", value: "$120,000", progress: 75 },
@@ -21,7 +20,7 @@ const Index = () => {
             </CardHeader>
             <CardContent>
               <p className="text-xl font-semibold">{metric.value}</p>
-              <Progress value={metric.progress} className="mt-2" />
+              <progress value={metric.progress} max="100" className="w-full mt-2"></progress>
             </CardContent>
           </Card>
         ))}
@@ -46,7 +45,7 @@ const Index = () => {
                     <TableCell>{metric.name}</TableCell>
                     <TableCell>{metric.value}</TableCell>
                     <TableCell>
-                      <Progress value={metric.progress} />
+                      <progress value={metric.progress} max="100" className="w-full"></progress>
                     </TableCell>
                   </TableRow>
                 ))}
